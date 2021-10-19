@@ -1,0 +1,201 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", href="/publico/css/albumcss.css")
+link(rel="stylesheet", href="/bscss/bootstrap.min.css")
+script(src="/jquery/jquery.js")
+script(src="/bsjs/bootstrap.min.js")
+script(src="/popperjs/popper.min.js")
+script(src="/publico/js/form-album.js")
+script(src="/publico/js/form-validation.js")
+title Negritude em Debate
+#header
+body 
+.container.d-flex.flex-column.col-md-6
+  .container
+    h2 Álbum Digital
+  form#dataForm(name="dataForm", action="album", method="POST", onsubmit="return validarFormulario()")
+    .form-album
+    .div-tab
+      .-tab#dados-pessoais
+        .tab-content
+          .mb-3
+            label.form-label(for="nome") Nome
+            input.form-control#nome(type="text", name="nome", required)
+            span.msg-erro.msg-nome
+          .mb-3
+            label.form-label(for="data") Data de nascimento
+            input.form-control#dataNascimento(type="date", name="dataNascimento", required)
+            span.msg-erro.msg-dataNascimento
+            br
+          .mb-3
+            .-maior#div-maior
+              label.form-label(for="cpf") CPF
+              input.form-control#cpf(type="text", name="cpf")
+              span.msg-erro.msg-cpf
+          .mb-3
+            label.form-label(for="email") E-mail
+            input.form-control#email(type="email", name="email", required)
+            span.msg-erro.msg-email
+          .row
+            .col
+              label.form-label(for="cpf") Telefone / Whatsapp
+              input.form-control#telefone(type="phone", name="telefone", required)
+              span.msg-erro.msg-telefone
+            .col
+              label.form-label(for="estado") Estado
+              select#estado.form-select.form-select-sm(name="estado", aria-label=".form-select-sm example", required)
+                option(value, selected)
+                option(value="ms") MS
+              span.msg-erro.msg-estado
+          .mb-3
+            label.form-label(for="cidade") Cidade
+            select#cidade.form-select.form-select-sm(name="cidade", aria-label=".form-select-sm example", required)
+              option(value, selected)
+              option(value="CG") Campo Grande
+              option(value="AQ") Aquidauana
+              option(value="TL") Três Lagoas
+              option(value="JD") Jardim
+              option(value="NA") Nova Andradina
+              option(value="DO") Dourados
+              option(value="CO") Corumbá
+              option(value="PP") Ponta Porã
+              option(value="SI") Sidrolândia
+              option(value="NAV") Naviraí
+              option(value="MA") Maracaju
+              option(value="PA") Paranaíba
+              option(value="AM") Amambai
+              option(value="RB") Rio Brilhante
+              option(value="COX") Coxim
+              option(value="CAA") Caarapó
+              option(value="MI") Miranda
+              option(value="SGO") São Gabriel do Oeste
+              option(value="ADT") Aparecida do Taboado
+              option(value="CHA") Chapadão do Sul
+              option(value="AN") Anastácio
+              option(value="IT") Itaporã
+              option(value="RRP") Ribas do Rio Pardo
+              option(value="BV") Bela Vista
+              option(value="LA") Ladário
+              option(value="BAT") Bataguassu
+              option(value="IV") Ivinhema
+              option(value="NAS") Nova Alvaroda do Sul
+              option(value="TER") Terenos
+              option(value="BO") Bonito
+              option(value="CASS") Cassilândia
+              option(value="ITA") Itaquiraí
+              option(value="CR") Costa Rica
+              option(value="RVMG") Rio Verde de Mato Grosso
+              option(value="SO") Sonora
+              option(value="FS") Fátima do Sul
+              option(value="MN") Mundo Novo
+              option(value="PM") Porto Murtinho
+              option(value="IG") Iguatemi
+              option(value="AC") Água Clara
+              option(value="CS") Coronel Sapucaia
+              option(value="PA") Paranhos
+              option(value="NIO") Nioaque
+              option(value="CA") Camapuã
+              option(value="DEO") Deodápolis
+              option(value="EL") Eldorado
+              option(value="AM") Aral Moreira
+              option(value="BRA") Brasilândia
+              option(value="TA") Tacuru
+              option(value="DIB") Dois Irmãos do Buriti
+              option(value="BATA") Batayporã
+              option(value="ANG") Angélica
+              option(value="SQ") Sete Quedas
+              option(value="GD") Glória de Dourados
+              option(value="GLL") Guia Lopes da Laguna
+              option(value="JAP") Japorã
+              option(value="ANAU") Anaurilândia
+              option(value="AJ") Antônio João
+              option(value="SRP") Santa Rita do Pardo
+              option(value="BOD") Bodoquena
+              option(value="PG") Pedro Gomes
+              option(value="IN") Inocência
+              option(value="LC") Laguna Carapã
+              option(value="BA") Bandeirantes
+              option(value="JAR") Jaraguari
+              option(value="JU") Juti
+              option(value="SEL") Selvíria
+              option(value="CARA") Caracol
+              option(value="VIC") Vicentina
+              option(value="COR") Corguinho
+              option(value="DOU") Douradina
+              option(value="PAR") Paraíso das Águas
+              option(value="ALCI") Alcinópolis
+              option(value="RO") Rochedo
+              option(value="RN") Rio Negro
+              option(value="JA") Jateí
+              option(value="NHS") Novo Horizonte do Sul
+              option(value="TAQ") Taquarussu
+              option(value="FIG") Figueirão
+            span.msg-erro.msg-cidade
+            br
+          .-resp#div-resp
+            h5 Para menores de idade:
+            .mb-3#div-nome-responsavel
+              label.form-label(for="nomeresp") Nome do responsavél:
+              input.form-control#nomeresp(type="text", name="nomeresp")
+              span.msg-erro.msg-nomeresp
+            .mb-3#div-cpf-responsavel
+              label.form-label(for="cpfresp") CPF do responsavél
+              input.form-control#cpfresp(type="text", name="cpfresp")
+              span.msg-erro.msg-cpfresp
+          br
+          hr
+      .-tab#autorizacao
+        .mb-3
+          label.form-label(for="obj") Objetivos
+          .form-floating
+            textarea.form-control.texto#obj(placeholder="Leave a comment here", name="obj", style="height: 100px", disabled).
+                                O projeto tem como objetivo visibilizar a beleza a cultura e a ancestralidade negra existentes no Mato Grosso do Sul, historicamente apagados e fora dos padrões estéticos eurocêntricos.
+                                Oportunizará assim, as discussões étnico-raciais capazes de qualificar e encorajar as professoras e professores a trabalharem com a problemática da população negra, em sala de aula, na tentativa de   	diminuir o arranjo da desigualdade existente no país.
+                              Para isso, a partir das fotografias selecionadas para a mostra fotográfica, irá se elaborar um álbum de fotografias que ao ser finalizado, será direcionado para escolas públicas, com a intenção de 	contribuir com o debate da Lei 10.639/03 que determina o ensino de História e Cultura Afro-brasileira nas escolas.
+                        
+        .mb-3
+          label.form-label(for="reg") Regras
+          .form-floating
+            textarea.form-control.texto#reg(placeholder="Leave a comment here", name="reg", style="height: 100px", disabled).
+                            - Cada pessoa poderá participar com uma fotografia
+                            - A fotografia deve ser no formato digital JPG/JPEG
+                            - A fotografia poderá ser colorida ou preta e branco
+                            - A técnica para criação é livre mas precisa seguir o tema Beleza Negra Resiste
+                            - Cada pessoa só poderá ser premiada uma única vez
+                            - As fotografias serão selecionadas por um júri composto de pessoas pretas, que julgará a beleza negra a partir dos elementos que permitirão evidenciar as conexões com as raízes negras, com a ancestralidade negra, com a diáspora negra, com as pequenas Áfricas que existem em cada pessoa negra que vive em Mato Grosso do Sul
+                            Toda fotografia deve ser encaminhada com a autorização de uso de imagem. A UFMS e o IFMS reservam para si, desde já, o direito incontestável de reproduzir as fotografias inscritas em seu material institucional a qualquer momento e por tempo indeterminado, dando os devidos créditos ao fotógrafo.
+                        
+        .row
+          .col
+            label.form-label(for="titulo") Titulo da foto
+            input.form-control#titulo(type="text", name="titulo", required)
+            span.msg-erro.msg-titulo
+          .col
+            label.form-label(for="nome-fotogra") Nome do(a) Fotográfo(a):
+            input.form-control#nomeFotogra(type="text", name="nomeFotogra", required)
+            span.msg-erro.msg-nomeFotogra
+        .mb-3
+          label.form-label(for="foto") Foto
+          input.form-control#foto(type="file", name="foto", required)
+          span.msg-erro.msg-foto
+        .row
+          .col
+            input.form-check-input#termo(type="checkbox", required)
+            label.form-check-label(for="termo").
+              
+              Li o termo e autorizo o uso da minha imagem
+              
+            span.msg-erro.msg-termo
+          .col-md-9
+            textarea.form-control.texto#termo(name="termo", style="height: 100px", disabled).
+                              AUTORIZAÇÃO DE USO DE IMAGEM 
+                          Autorizo a Universidade Federal do Mato Grosso do Sul e o Instituto Federal do Mato Grosso do Sul, bem como a/o fotógrafa/o a utilizarem a minha imagem para fins de participação na mostra fotográfica "Beleza Negra Resiste". Poderão utilizá-la na divulgação de materiais impressos, audiovisuais e eletrônicos, sem fins lucrativos e também poderá ser utilizada por tempo indeterminado. Fica assim autorizada, de livre e espontânea vontade, para os mesmos fins a cessão de direitos de veiculação, não recebendo para tanto qualquer tipo de remuneração. 
+                          Por meio desta autorização, eu libero a UFMS e o IFMS, acima citados, seus representantes legais ou fornecedores, de futuros processos e queixas por violação de privacidade ou de direito de propriedade que eu poderia ter em relação a tal produção.  
+                          Ao marcar o aceite da leitura do termo e autorização da imagem, concordo com as regras e autorização dispostas nesta página. 
+                         
+        br
+        .container.d-flex.justify-content-around.div-botao
+          button.btn.btn-primary(type="submit", onclick="validarFormulario()") Enviar
+form#fileForm(action="/uploadFoto", method="POST", enctype="multipart/form-data", style="visibility: hidden;")
+  input(type="submit")
+#footer

@@ -1,0 +1,47 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", href="/publico/css/albumcss.css")
+link(rel="stylesheet", href="/bscss/bootstrap.min.css")
+script(src="/jquery/jquery.js")
+script(src="/bsjs/bootstrap.min.js")
+script(src="/popperjs/popper.min.js")
+script(src="/publico/js/form-album.js")
+script(src="/publico/js/form-validation.js")
+title Negritude em Debate
+body 
+h2 Relatorio dos albuns
+p=`${todosOsAlbuns}`
+table.table
+ thead 
+    tr 
+        th Nome
+        th CPF
+        th Telefone 
+        th email 
+        th Estado 
+        th Cidade 
+        th Data de Nascimento 
+        th Titulo da Foto 
+        th Nome do Fotografo(a)
+        th Nome da Foto 
+        th Nome do Responsavel 
+        th CPF do Responsavel 
+        th Data de Autorização 
+ tbody 
+        each Albuns in todosOsAlbuns
+            tr 
+                td #{Albuns.nome}
+                td #{Albuns.cpf}
+                td #{Albuns.tel}
+                td #{Albuns.email}
+                td #{Albuns.estado}
+                td #{Albuns.cidade}
+                td #{Albuns.data_nascimento}
+                td #{Albuns.titulo_foto}
+                td #{Albuns.nome_fotografo}
+                td #{Albuns.nome_foto}
+                td #{Albuns.nome_responsavel}
+                td #{Albuns.cpf_responsavel}
+                td #{Albuns.data_autorizacao}
+          
+
