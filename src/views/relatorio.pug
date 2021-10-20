@@ -11,6 +11,7 @@ title Negritude em Debate
 body 
 h2 Relatorio dos albuns
 p=`${todosOsAlbuns}`
+ 
 table.table
  thead 
     tr 
@@ -29,6 +30,7 @@ table.table
         th Data de Autorização 
  tbody 
         each Albuns in todosOsAlbuns
+           
             tr 
                 td #{Albuns.nome}
                 td #{Albuns.cpf}
@@ -39,7 +41,8 @@ table.table
                 td #{Albuns.data_nascimento}
                 td #{Albuns.titulo_foto}
                 td #{Albuns.nome_fotografo}
-                td #{Albuns.nome_foto}
+                td         
+                    img(src='/uploads/maria.jpg') 
                 td #{Albuns.nome_responsavel}
                 td #{Albuns.cpf_responsavel}
                 td #{Albuns.data_autorizacao}
