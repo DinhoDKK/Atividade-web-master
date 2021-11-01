@@ -1,0 +1,83 @@
+meta(charset="utf-8")
+meta(name="viewport", content="width=device-width,initial-scale=1")
+link(rel="stylesheet", href="/bscss/bootstrap.min.css")
+script(src="/jquery/jquery.js")
+script(src="/bsjs/bootstrap.min.js")
+script(src="/popperjs/popper.min.js")
+script(src="/publico/js/form-album.js")
+script(src="/publico/js/form-validation.js")
+title Personalidades Negras
+link(href="/publico/css/carousel.css", rel="stylesheet")
+#header
+main
+  #myCarousel.carousel.slide(data-bs-ride="carousel")
+    .carousel-indicators
+      button.active(type="button", data-bs-target="#myCarousel", data-bs-slide-to="0", aria-current="true", aria-label="Slide 1")
+      button(type="button", data-bs-target="#myCarousel", data-bs-slide-to="1", aria-label="Slide 2")
+      button(type="button", data-bs-target="#myCarousel", data-bs-slide-to="2", aria-label="Slide 3")
+    .carousel-inner
+      .carousel-item.active
+        img(src="/img/carousel1.jpg")
+        .container
+          .carousel-caption.text-start
+            h1 Personalidades Negras.
+            p A beleza negra resiste.
+            p
+              a.btn.btn-lg.btn-primary(href="album") Crie seu album
+      .carousel-item
+        img(src="/img/carousel2.jpg")
+        .container
+          .carousel-caption
+            h1 Personalidades Negras.
+            p A beleza negra resiste.
+            p
+              a.btn.btn-lg.btn-primary(href="album") Crie seu album
+      .carousel-item
+        img(src="/img/carousel3.jpg")
+        .container
+          .carousel-caption.text-end
+            h1 Personalidades Negras.
+            p A beleza negra resiste.
+            p
+              a.btn.btn-lg.btn-primary(href="album") Crie seu album
+    button.carousel-control-prev(type="button", data-bs-target="#myCarousel", data-bs-slide="prev")
+      span.carousel-control-prev-icon(aria-hidden="true")
+      span.visually-hidden Voltar
+    button.carousel-control-next(type="button", data-bs-target="#myCarousel", data-bs-slide="next")
+      span.carousel-control-next-icon(aria-hidden="true")
+      span.visually-hidden Proximo
+  hr.featurette-divider
+  .row.featurette
+    .col-md-7
+      h2.featurette-heading Nelson Mandela
+      p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate risus quis turpis vulputate pulvinar. Vestibulum et dolor condimentum, cursus sem suscipit, cursus nisl. Proin dignissim nunc quis justo sagittis porta. Nam iaculis nisi et semper convallis. Pellentesque sed ante id risus vehicula condimentum sed ac ex. Donec bibendum, ex eu facilisis mollis, mauris metus fringilla urna, id facilisis elit ipsum nec ligula. Nam ac mi velit. Mauris sagittis nunc fringilla ex feugiat volutpat. Quisque commodo faucibus feugiat. Aenean varius non diam a porta. Praesent dapibus pretium justo, sed consequat lorem elementum quis. Aenean tempor auctor nulla ut euismod. Mauris tortor tellus, aliquam vitae viverra vitae, efficitur ut libero.
+    .col-md-5
+      img(src="/img/carousel1.jpg", width="500", height="500")
+  hr.featurette-divider
+  .row.featurette
+    .col-md-7.order-md-2
+      h2.featurette-heading Martin Luther King
+      p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate risus quis turpis vulputate pulvinar. Vestibulum et dolor condimentum, cursus sem suscipit, cursus nisl. Proin dignissim nunc quis justo sagittis porta. Nam iaculis nisi et semper convallis. Pellentesque sed ante id risus vehicula condimentum sed ac ex. Donec bibendum, ex eu facilisis mollis, mauris metus fringilla urna, id facilisis elit ipsum nec ligula. Nam ac mi velit. Mauris sagittis nunc fringilla ex feugiat volutpat. Quisque commodo faucibus feugiat. Aenean varius non diam a porta. Praesent dapibus pretium justo, sed consequat lorem elementum quis. Aenean tempor auctor nulla ut euismod. Mauris tortor tellus, aliquam vitae viverra vitae, efficitur ut libero.
+    .col-md-5.order-md-1
+      img(src="/img/carousel2.jpg", width="500", height="500")
+  hr.featurette-divider
+  .row.featurette
+    .col-md-7
+      h2.featurette-heading Bob Marley
+      p.lead Lorem ipsum dolor sit amet, consectetur adipiscing elit. In vulputate risus quis turpis vulputate pulvinar. Vestibulum et dolor condimentum, cursus sem suscipit, cursus nisl. Proin dignissim nunc quis justo sagittis porta. Nam iaculis nisi et semper convallis. Pellentesque sed ante id risus vehicula condimentum sed ac ex. Donec bibendum, ex eu facilisis mollis, mauris metus fringilla urna, id facilisis elit ipsum nec ligula. Nam ac mi velit. Mauris sagittis nunc fringilla ex feugiat volutpat. Quisque commodo faucibus feugiat. Aenean varius non diam a porta. Praesent dapibus pretium justo, sed consequat lorem elementum quis. Aenean tempor auctor nulla ut euismod. Mauris tortor tellus, aliquam vitae viverra vitae, efficitur ut libero.
+    .col-md-5
+      img(src="/img/carousel3.jpg", width="500", height="500")
+  hr.featurette-divider
+  .container.marketing
+    h2(style="text-align: center; padding: auto;") Desenvolvedores
+    .row
+      .col-lg-4
+        img.bd-placeholder-img.rounded-circle(src="/img/dev1.jpg", width="140", height="140", preserveaspectratio="xMidYMid slice")
+        h2 Luiz Ricardo
+      .col-lg-4
+        img.bd-placeholder-img.rounded-circle(src="/img/dev2.jpg", width="140", height="140", preserveaspectratio="xMidYMid slice")
+        h2 Bruno Vieira
+      .col-lg-4
+        img.bd-placeholder-img.rounded-circle(src="/img/dev3.jpg", width="140", height="140", preserveaspectratio="xMidYMid slice")
+        h2 Fábio Luiz
+  #footer

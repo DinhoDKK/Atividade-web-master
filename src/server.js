@@ -64,6 +64,7 @@ const PORTA = process.env.PORT || 3000;
 
 //caminhos
 app.use('/views', express.static(__dirname + '/views'));
+app.use('/img', express.static(__dirname + '/img'));
 app.use('/uploads', express.static('./uploads'));
 app.use('/publico', express.static(__dirname + '/publico'));
 app.use('/bscss', express.static('./node_modules/bootstrap/dist/css'));
@@ -91,6 +92,15 @@ app.set('view engine','pug');
 });
 
 //requisições
+
+app.get('/', function(req,resp){
+  resp.render('index')
+});
+
+app.get('/index', function(req,resp){
+  resp.render('index')
+});
+
 
 app.get('/album', function(req,resp){
    resp.render('album')
